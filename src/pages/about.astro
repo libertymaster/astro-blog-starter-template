@@ -8,31 +8,106 @@ import Layout from '../layouts/BlogPost.astro';
 	pubDate={new Date('August 08 2021')}
 	heroImage="/me.jpg"
 >
-{% extends "base.html" %}
-
-{% block title %}About | {{ site_name }}{% endblock %}
-{% block meta_description %}The mission, editorial principles, corrections policy, and disclosure standards of {{ site_name }}.{% endblock %}
-
-{% block content %}
-<article class="prose-page">
-  <p class="eyebrow">About</p>
-  <h1>{{ site_name }}</h1>
-  <p class="lead">{{ site_tagline }}</p>
-
-  <h2>Editorial purpose</h2>
-  <p>The publication is designed for work that benefits from context: current reporting, analysis, historical biographies, essays, primary-source material, and research papers. Every page should clearly identify its author, content type, publication date, and subsequent corrections.</p>
-
-  <h2>Evidence and attribution</h2>
-  <p>Historical and scholarly work should distinguish primary sources from later interpretation. Citations, bibliographies, image credits, archival references, and attached source documents are part of the publication record rather than decorative afterthoughts.</p>
-
-  <h2>Corrections</h2>
-  <p>Substantive corrections should remain visible on the article and include a date and explanation. Minor copy edits may be incorporated without a correction note when they do not alter the meaning of the work.</p>
-
-  <h2>Editorial labels</h2>
-  <p>News, analysis, opinion, history, interviews, reviews, and papers are distinct forms. The site labels each item so readers can understand the methods and claims appropriate to that work.</p>
-
-  <h2>Contact</h2>
-  <p>Questions, corrections, source material, and article suggestions may be submitted through the <a href="{% url 'contact:form' %}">contact form</a>.</p>
-</article>
-{% endblock %}
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header py-4">
+    <div class="container site-container">         
+      <p class="site-title">
+        <a class="text-center" href="index.html">The Liberty Articulator</a>
+      </p>
+      <p class="site-tagline text-center">
+        Investigating under the microscope of liberty.<br>
+        Analyzing through the telescope of history.
+      </p>               
+    </div>
+    <button type="button" class="btn btn-primary btn-lg btn-block" style="color: orange;" href="subscribe.html">Subscribe</button>    
+  </header>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav class="site-nav py-2" aria-label="Primary navigation">
+      <ul class="nav d-flex justify-content-center">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="usnews.html">U.S.</a></li>
+        <li class="nav-item"><a class="nav-link" href="worldnews.html">World</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics.html">Politics</a></li>
+        <li class="nav-item"><a class="nav-link" href="opinion.html">Opinion</a></li>        
+        <li class="nav-item"><a class="nav-link" href="historysheroes.html">History's Heroes</a></li>  
+        <li class="nav-item"><a class="nav-link" href="technology.html">Technology</a></li>
+        <li class="nav-item"><a class="nav-link" href="travel.html">Travel</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Staff</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="subscribe.html">Subscribe</a></li>       
+      </ul>
+  </nav>
+  <main id="main-content" class="container site-container">
+    <article class="article-page">
+      <div class="article-content">       
+        <h3>
+          About Us
+        </h3>      
+      <div class="container mt-3">
+        <h2>This is Team Liberty!</h2>
+        <p>Lamont Michael Kimberlin: Chief Editor</p>
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Lamont Michael Kimberlin</h4>
+              <p class="card-text">Lamont Kimberlin is Founder, Sole Proprietor, and Chief Editor of The Liberty Articulator.</p>
+              <a href="lamontkimberlin.html" class="btn btn-primary">See Profile</a>
+           </div>
+         </div>
+         <br>
+      <div class="container mt-3">
+        <p>Noah Kimberlin: Lead Editor</p>
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Noah Kimberlin</h4>
+              <p class="card-text">Noah Kimberlin is the Lead Editor of The Liberty Articulator.</p>
+              <p class="card-text">He is also the founder and Chief Editor of The Liberty Articulator's      .</p>
+              <a href="noahkimberlin.html" class="btn btn-primary">See Profile</a>
+            </div>
+        </div>
+         <br>          
+         <p></p>
+         <div class="card" style="width:400px">
+           <div class="card-body">
+             <h4 class="card-title">Petra Morris</h4>
+             <p class="card-text">Petra Morris is a Contributing Editor of The Liberty Emporium.</p>
+             <p class="card-text">She is also the founder and Chief Editor of The Liberty Emporium's Butthead Division.</p>
+             <a href="petramorris.html" class="btn btn-primary">See Profile</a>
+           </div>
+             <img class="card-img-bottom" src="../bootstrap4/img_avatar6.png" alt="Card image" style="width:100%">
+         </div>                                          
+      </div>              
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="container site-container">
+      <address>
+        Written by<br>
+        Lamont Michael Kimberlin<br>
+        The Liberty Articulator<br>
+        United States<br>
+        Contact via email at:<br>
+        <a href="mailto:libertymaster@thelibertyarticulator.com">libertymaster@thelibertyarticulator.com</a>
+      </address>
+      <img
+        src="images/me.png"
+        alt="Portrait of Lamont Kimberlin"
+        class="footer-portrait"
+        loading="lazy"
+      >
+      <p>
+        And don't forget to...<br>
+        Embrace your liberty!
+      </p>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <a href="index.html">Back to Home page</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
 </Layout>
