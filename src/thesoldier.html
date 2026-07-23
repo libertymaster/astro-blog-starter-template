@@ -1,0 +1,148 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header py-4">
+    <div class="container site-container">   
+      
+      <p class="article-series">
+        <a class="text-center">The Liberty Articulator Presents</a>
+      </p>
+      <p class="article-series" href="historysheroes.html">History's Heroes</p>               
+    </div>
+  </header>
+
+  <nav class="site-nav py-2" aria-label="Primary navigation">
+      <ul class="nav d-flex justify-content-center">
+        <li class="nav-item"><a class="nav-link" href="marcbloch.html">Marc Bloch</a></li>
+        <li class="nav-item"><a class="nav-link" href="frederickdouglass.html">Frederick Douglass</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="thesoldier.html">The Soldier</a></li>
+        <li class="nav-item"><a class="nav-link" href="ronpaul.html">Ron Paul</a></li>
+        <li class="nav-item"><a class="nav-link" href="oskarschindler.html">Oskar Schindler</a></li>     
+      </ul>
+  </nav>
+
+  <main id="main-content" class="container site-container">
+    <article class="article-page">
+      <header class="article-header">
+<!--        <p class="article-series">The Liberty Articulator Presents</p>
+        <p class="article-series">History's Heroes</p>-->
+
+        <h3 class="article-title">The Soldier</h3>
+
+        <p class="article-deck">
+          The Soldier
+        </p>
+
+        <p class="article-meta">
+          By <a href="lamont.html" rel="author">Lamont Michael Kimberlin</a>
+          <span aria-hidden="true"> | </span>
+          <time datetime="2015-03-10">March 10, 2015</time>
+        </p>
+      </header>
+
+      <div class="article-content">
+        <p>
+          The Soldier
+        </p>
+
+        <h2>The Soldier</h2>
+
+        <p>
+          The Soldier
+        </p>
+
+        <p>
+          The Soldier
+        </p>
+
+        <p>
+          The Soldier
+        </p>
+
+        <h2>Education and Early Career</h2>
+
+        <p>
+          The Soldier
+        </p>
+
+        <p>
+          The Soldier
+        </p>
+
+        <figure class="article-figure">
+          <img
+            src="images/YoungBloch.png"
+            alt="The Soldier"
+            loading="lazy"
+          >
+          <figcaption>
+            Fig. 1 — Marc Bloch as a sergeant in the First World War.
+          </figcaption>
+        </figure>
+  
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-container">
+      <address>
+        Written by<br>
+        Lamont Michael Kimberlin<br>
+        The Liberty Articulator<br>
+        United States<br>
+        Contact via email at:<br>
+        <a href="mailto:libertymaster@thelibertyemporium.com">libertymaster@thelibertyemporium.com</a>
+      </address>
+
+      <img
+        src="images/me.png"
+        alt="Portrait of Lamont Kimberlin"
+        class="footer-portrait"
+        loading="lazy"
+      >
+
+      <p>
+        And don't forget to...<br>
+        Embrace your liberty!
+      </p>
+
+      <p>
+        &copy; 2022 - <span id="year"></span> The Liberty Articulator - All Rights Reserved.
+      </p>
+
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <a href="index.html">Back to Home page</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const yearElement = document.getElementById("year");
+
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
+  </script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>

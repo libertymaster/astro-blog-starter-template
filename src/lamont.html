@@ -11,7 +11,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 
-
 <body id="top">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
@@ -19,7 +18,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     <div class="container site-container">   
       
       <p class="site-title">
-        <a class="text-center" href="index.astro">The Liberty Articulator</a>
+        <a class="text-center" href="index.html">The Liberty Articulator</a>
       </p>
       <p class="site-tagline text-center">
         Investigating under the microscope of liberty.<br>
@@ -30,37 +29,38 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
   <nav class="site-nav py-2" aria-label="Primary navigation">
       <ul class="nav d-flex justify-content-center">
-        <li class="nav-item"><a class="nav-link" href="index.astro">Home</a></li>       
-        <li class="nav-item"><a class="nav-link" href="historysheroes.html">History's Heroes</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.astro">Staff</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.astro">Contact</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="usnews.html">U.S.</a></li>
+        <li class="nav-item"><a class="nav-link" href="worldnews.html">World</a></li>
+        <li class="nav-item"><a class="nav-link" href="politics.html">Politics</a></li>
+        <li class="nav-item"><a class="nav-link" href="opinion.html">Opinion</a></li>        
+        <li class="nav-item"><a class="nav-link" href="historysheroes.html">History's Heroes</a></li>  
+        <li class="nav-item"><a class="nav-link" href="technology.html">Technology</a></li>
+        <li class="nav-item"><a class="nav-link" href="travel.html">Travel</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Staff</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         <li class="nav-item"><a class="nav-link" href="subscribe.html">Subscribe</a></li>       
       </ul>
   </nav>
   <main id="main-content" class="container site-container">
+      <div class="p-4 p-md-5 mb-4 rounded">
+        <div class="col-lg-6 px-0">
+          <h1 class="fst-italic" style="color: white; font-family: Times New Roman, Times, serif;">
+            
+          </h1>
+          <p style="color: white;">
+            
+          </p>
+        </div>
+      </div>
     <article class="article-page">
       <header class="article-header">
-        <h3 class="article-series">News</h3>
-
-        <h3 class="article-title">A peace agreement between the U.S. and Iran will be signed Sunday, according to President Trump</h3>
+        <h3 class="article-series">Lamont Patrick Michael Kimberlin</h3>
 
         <p class="article-deck">
-The President said once the memorandum of understanding between the U.S. and Iran is signed, the Strait of Hormuz will be reopened and Iran will stop pursuing a nuclear weapon.
+          Lamont Kimberlin is Founder, Sole Proprietor, and Chief Editor of The Liberty Emporium.
         </p>
 
-        <p class="article-meta">
-          By <a href="lamont.astro" rel="author">Lamont Michael Kimberlin</a>
-          <span aria-hidden="true"> | </span>
-          <time datetime="2015-03-10">June 13, 2026</time>
-        </p>
-      </header>
-
-      <div class="article-content">       
-        <h4>
-          <a href="peace_us_iran.html" style="color: white;"
-            >Continue reading about the peace agreement between the U.S. and Iran.</a
-          >
-        </h4>
       </div>              
     </article>
   </main>
@@ -72,7 +72,7 @@ The President said once the memorandum of understanding between the U.S. and Ira
         The Liberty Articulator<br>
         United States<br>
         Contact via email at:<br>
-        <a href="mailto:libertymaster@thelibertyarticulator.com">libertymaster@thelibertyarticulator.com</a>
+        <a href="mailto:libertymaster@thelibertyemporium.com">libertymaster@thelibertyemporium.com</a>
       </address>
 
       <img
@@ -97,5 +97,19 @@ The President said once the memorandum of understanding between the U.S. and Ira
       </div>
     </div>
   </footer>
+
+  <script>
+    const yearElement = document.getElementById("year");
+
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
+  </script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
 </body>
-</html>  
+</html>

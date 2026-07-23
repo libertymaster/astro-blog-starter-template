@@ -1,0 +1,118 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header py-4">
+    <div class="container site-container">   
+      
+      <p class="article-series">
+        <a class="text-center">The Liberty Articulator Presents</a>
+      </p>
+      <p class="article-series" href="historysheroes.html">History's Heroes</p>               
+    </div>
+  </header>
+
+  <nav class="site-nav py-2" aria-label="Primary navigation">
+      <ul class="nav d-flex justify-content-center">
+        <li class="nav-item"><a class="nav-link" href="marcbloch.html">Marc Bloch</a></li>
+        <li class="nav-item"><a class="nav-link" href="frederickdouglass.html">Frederick Douglass</a></li>
+        <li class="nav-item"><a class="nav-link" href="thesoldier.html">The Soldier</a></li>
+        <li class="nav-item"><a class="nav-link" href="ronpaul.html">Ron Paul</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="oskarschindler.html">Oskar Schindler</a></li>     
+      </ul>
+  </nav>
+
+  <main id="main-content" class="container site-container">
+    <article class="article-page">
+      <header class="article-header">
+<!--        <p class="article-series">The Liberty Articulator Presents</p>
+        <p class="article-series">History's Heroes</p>-->
+
+        <h1 class="article-title">Oskar Schindler:</h1>
+            <h2>An Unexpected Hero</h2>
+
+        <p class="article-deck">
+          Oskar Schindler was a German industrialist, humanitarian, and member of the Nazi Party who is credited with saving the lives of 1,200 Jews during the Holocaust by employing them in his enamelware and ammunitions factories in occupied Poland and the Protectorate of Bohemia and Moravia. He is the subject of the 1982 novel Schindler's Ark and its 1993 film adaptation, Schindler's List.
+        </p>          
+        <p class="article-meta">
+          By <a href="lamont.html" rel="author">Lamont Michael Kimberlin</a>
+          <span aria-hidden="true"> | </span>
+          <time datetime="2015-03-10">March 10, 2015</time>
+        </p>
+      </header>          
+          
+      <div class="article-content">          
+        </p>
+        <p>In 1943, Schindler was contacted by Zionist leaders in Budapest via members of the Jewish resistance movement. He travelled to Budapest several times to report in person on Nazi mistreatment of the Jews. He brought back funding provided by the Jewish Agency for Palestine and turned it over to the Jewish underground.
+        </p> 
+        <p>Schindler also arranged for the transfer of as many as 3,000 Jewish women out of Auschwitz to small textiles plants in the Sudetenland in an effort to increase their chances of surviving the war. In January 1945, a trainload of 250 Jews who had been rejected as workers at a German mine in Goleschau in occupied Poland arrived at Brünnlitz. The boxcars were frozen shut when they arrived, and Emilie waited while an engineer from the factory opened them with a soldering iron. Twelve people were dead in the cars, and the remainder were too ill and feeble to work. Emilie took the survivors into the factory and cared for them in a makeshift hospital until the end of the war. Schindler continued to bribe SS officials to prevent the slaughter of his workers as the Red Army approached. On 7 May 1945 he and his workers gathered on the factory floor to listen to British Prime Minister Winston Churchill announce over the radio that Germany had surrendered and that the war in Europe was over.
+        </p>
+        <p>In 1949, Schindler emigrated to Argentina, where he tried raising chickens and then nutria (coypu), a small animal raised for its fur. When the business went bankrupt in 1958, he left his wife and returned to Germany, where he had a series of unsuccessful business ventures, including a cement factory. He declared bankruptcy in 1963 and suffered a heart attack the next year, which led to a monthlong hospital stay. Remaining in contact with many of the Jews he had met during the war, including Stern and Pfefferberg, Schindler survived on donations sent by Schindlerjuden from all over the world.
+        </p>
+        <p>For his work during the war, on 8 May 1962, Yad Vashem invited Schindler to a ceremony in which a carob tree was planted in his honour on the Avenue of the Righteous. Schindler received awards for his efforts, including the German Order of Merit in 1966. Schindler died of liver failure on 9 October 1974. He is buried in Jerusalem on Mount Zion, possibly the only member of the Nazi Party to be honoured in this way. On 24 June 1993, he and his wife were named Righteous Among the Nations, an award the State of Israel bestows on non-Jews who took an active role in rescuing Jews during the Holocaust. Schindler, along with Karl Plagge, Georg Ferdinand Duckwitz, Helmut Kleinicke, and Hans Walz is among the few Nazi Party members to be given this award.
+        </p>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-container">
+      <address>
+        Written by<br>
+        Lamont Michael Kimberlin<br>
+        The Liberty Articulator<br>
+        United States<br>
+        Contact via email at:<br>
+        <a href="mailto:libertymaster@thelibertyemporium.com">libertymaster@thelibertyemporium.com</a>
+      </address>
+
+      <img
+        src="images/me.png"
+        alt="Portrait of Lamont Kimberlin"
+        class="footer-portrait"
+        loading="lazy"
+      >
+
+      <p>
+        And don't forget to...<br>
+        Embrace your liberty!
+      </p>
+
+      <p>
+        &copy; 2022 - <span id="year"></span> The Liberty Articulator - All Rights Reserved.
+      </p>
+
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <a href="index.html">Back to Home page</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const yearElement = document.getElementById("year");
+
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
+  </script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
