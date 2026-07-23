@@ -1,101 +1,17 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Container from "@/components/container.astro";
+import Cta from "@/components/cta.astro";
+import Features from "@/components/features.astro";
+import Hero from "@/components/hero.astro";
+import Logos from "@/components/logos.astro";
+import Layout from "@/layouts/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-
-
-<body id="top">
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-
-  <header class="site-header py-4">
-    <div class="container site-container">   
-      
-      <p class="site-title">
-        <a class="text-center" href="index.astro">The Liberty Articulator</a>
-      </p>
-      <p class="site-tagline text-center">
-        Investigating under the microscope of liberty.<br>
-        Analyzing through the telescope of history.
-      </p>               
-    </div>    
-  </header>
-
-  <nav class="site-nav py-2" aria-label="Primary navigation">
-      <ul class="nav d-flex justify-content-center">
-        <li class="nav-item"><a class="nav-link" href="index.astro">Home</a></li>       
-        <li class="nav-item"><a class="nav-link" href="historysheroes.html">History's Heroes</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.astro">Staff</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.astro">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="subscribe.html">Subscribe</a></li>       
-      </ul>
-  </nav>
-  <main id="main-content" class="container site-container">
-    <article class="article-page">
-      <header class="article-header">
-        <h3 class="article-series">News</h3>
-
-        <h3 class="article-title">A peace agreement between the U.S. and Iran will be signed Sunday, according to President Trump</h3>
-
-        <p class="article-deck">
-The President said once the memorandum of understanding between the U.S. and Iran is signed, the Strait of Hormuz will be reopened and Iran will stop pursuing a nuclear weapon.
-        </p>
-
-        <p class="article-meta">
-          By <a href="lamont.astro" rel="author">Lamont Michael Kimberlin</a>
-          <span aria-hidden="true"> | </span>
-          <time datetime="2015-03-10">June 13, 2026</time>
-        </p>
-      </header>
-
-      <div class="article-content">       
-        <h4>
-          <a href="peace_us_iran.html" style="color: white;"
-            >Continue reading about the peace agreement between the U.S. and Iran.</a
-          >
-        </h4>
-      </div>              
-    </article>
-  </main>
-  <footer class="site-footer">
-    <div class="container site-container">
-      <address>
-        Written by<br>
-        Lamont Michael Kimberlin<br>
-        The Liberty Articulator<br>
-        United States<br>
-        Contact via email at:<br>
-        <a href="mailto:libertymaster@thelibertyarticulator.com">libertymaster@thelibertyarticulator.com</a>
-      </address>
-
-      <img
-        src="images/me.png"
-        alt="Portrait of Lamont Kimberlin"
-        class="footer-portrait"
-        loading="lazy"
-      >
-
-      <p>
-        And don't forget to...<br>
-        Embrace your liberty!
-      </p>
-
-      <p>
-        &copy; 2022 - <span id="year"></span> The Liberty Articulator - All Rights Reserved.
-      </p>
-
-      <div class="footer-links">
-        <a href="#top">Back to top</a>
-        <a href="index.html">Back to Home page</a>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>  
+<Layout title="">
+  <Container>
+    <Hero />
+    <Features />
+    <Logos />
+    <Cta />
+  </Container>
+</Layout>
